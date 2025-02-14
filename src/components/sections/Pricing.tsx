@@ -1,10 +1,29 @@
 import React, { useState } from 'react';
 import { Check, Info, HelpCircle } from 'lucide-react';
 
+// Define types for the pricing tiers
+interface PricingTier {
+  name: string;
+  price: {
+    monthly: number;
+    annually: number;
+  };
+  description: string;
+  features: string[];
+  asset_limit: string;
+  highlight: boolean;
+  cta: string;
+}
+
+// Define props for the FeatureTooltip component
+interface FeatureTooltipProps {
+  text: string;
+}
+
 const PricingSection = () => {
-  const [billingPeriod, setBillingPeriod] = useState('monthly');
+  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annually'>('monthly');
   
-  const pricingTiers = [
+  const pricingTiers: PricingTier[] = [
     {
       name: "Starter",
       price: {
@@ -66,7 +85,8 @@ const PricingSection = () => {
     }
   ];
   
-  const FeatureTooltip = ({ text }) => (
+  // FeatureTooltip component
+  const FeatureTooltip: React.FC<FeatureTooltipProps> = ({ text }) => (
     <div className="group relative">
       <HelpCircle className="w-4 h-4 text-slate-400 inline-flex ml-1.5 cursor-help" />
       <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-slate-800 text-xs text-slate-200 p-2 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
