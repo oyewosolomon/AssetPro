@@ -11,21 +11,21 @@ const TestimonialsSection = () => {
       author: "Sarah Chen",
       title: "CIO, Pacific Northwest Foundation",
       rating: 5,
-      image: "/testimonials/sarah-chen.webp"
+      image: "https://randomuser.me/api/portraits/men/50.jpg"
     },
     {
       quote: "The tax optimization alone saved our clients over 0.8% annually. The platform's intuitive interface makes it easy to demonstrate value to clients while the powerful backend handles all the complex operations.",
       author: "Michael Rodriguez",
       title: "Principal, Westcoast Wealth Advisors",
       rating: 5,
-      image: "/testimonials/michael-rodriguez.webp"
+      image: "https://randomuser.me/api/portraits/men/51.jpg"
     },
     {
       quote: "As a retail investor, I never thought I'd have access to the same quality research and tools as the professionals. AssetPro has completely transformed how I manage my portfolio with its intelligent automation and real-time insights.",
       author: "Emma Johnson",
       title: "Individual Investor",
       rating: 5,
-      image: "/testimonials/emma-johnson.webp"
+      image: "https://randomuser.me/api/portraits/men/52.jpg"
     }
   ];
   
@@ -137,7 +137,7 @@ const TestimonialsSection = () => {
                       {/* Author info */}
                       <div>
                         <p className="text-white font-semibold">{testimonial.author}</p>
-                        <p className="text-slate-400 text-sm">{testimonial.title}</p>
+                        {/* <p className="text-slate-400 text-sm">{testimonial.title}</p> */}
                       </div>
                     </div>
                   ))}

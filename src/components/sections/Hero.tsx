@@ -103,7 +103,7 @@ const Hero = () => {
                   {/* Dashboard mockup */}
                   <div className="aspect-[16/9]">
                     <img 
-                      src="/dashboard-preview.webp" 
+                      src="/images/dash-1.webp" 
                       alt="AssetPro Dashboard" 
                       className="w-full h-full object-cover"
                     />
@@ -132,7 +132,7 @@ const Hero = () => {
                 </div>
                 
                 {/* Floating notification element */}
-                <div className="absolute -right-10 top-8 bg-white/10 backdrop-blur-md rounded-lg p-3 shadow-xl animate-pulse">
+                <div className="absolute -right-4 top-8 bg-white/10 backdrop-blur-md rounded-lg p-3 shadow-xl animate-pulse">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
                       <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -149,7 +149,7 @@ const Hero = () => {
                 {/* Mobile app preview */}
                 <div className="absolute -left-10 bottom-4 w-24 rounded-xl overflow-hidden shadow-xl border border-slate-700 rotate-6">
                   <img 
-                    src="/mobile-app.webp" 
+                    src="/images/dash.webp" 
                     alt="Mobile App" 
                     className="w-full"
                   />
