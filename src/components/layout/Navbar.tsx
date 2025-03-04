@@ -85,7 +85,7 @@ const Navbar = () => {
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button
-              className="flex items-center text-gray-100 px-2 py-2 text-gray-700 hover:text-blue-600 focus:outline-none"
+              className={`flex items-center text-gray-100 px-2 py-2 ${ isScrolled?'text-gray-700':''} hover:text-blue-600 focus:outline-none`}
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <span>{item.name}</span>
@@ -108,7 +108,7 @@ const Navbar = () => {
         ) : (
           <a
             href={item.href}
-            className="px-3 py-2 text-gray-100 hover:text-blue-600"
+            className={`px-3 py-2 ${isScrolled?'text-gray-700':'text-gray-100'} hover:text-blue-600`}
           >
             {item.name}
           </a>
@@ -130,7 +130,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-blue-600">AssetPro</span>
+              <span className={`text-2xl font-bold ${isScrolled?'text-blue-600':'text-white'}`}>AssetPro</span>
             </a>
           </div>
 
@@ -147,7 +147,7 @@ const Navbar = () => {
              
               <a
                 href="/login"
-                className="px-4 py-2 text-sm text-white border border-blue-600 rounded-md hover:bg-blue-50 hover:text-blue-600"
+                className={`px-4 py-2 text-sm ${ isScrolled?'text-gray-600':'text-white '} border border-blue-600 rounded-md hover:bg-blue-50 hover:text-blue-600`}
               >
                 Log In
               </a>
@@ -167,9 +167,9 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
             >
               {isOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-6 w-6 text-white" aria-hidden="true" />
               ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
+                <Menu className="h-6 w-6 text-white" aria-hidden="true" />
               )}
             </button>
           </div>
