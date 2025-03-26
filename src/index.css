@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222 89% 51%;
     --radius: 0.75rem;
+    --font-teko: 'Teko', sans-serif;
+    --font-sans: 'ui-sans-serif', sans-serif;
   }
 
   .dark {
@@ -46,6 +48,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --font-teko: 'Teko', sans-serif;
+    --font-sans: 'ui-sans-serif', sans-serif;
   }
 
   * {
@@ -53,8 +57,22 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 
+   /* Apply Teko to display text */
+   h1, h2, h3, .display-text {
+    font-family: var(--font-teko);
+    @apply font-medium; /* 500 weight works best */
+    letter-spacing: 0.025em;
+    line-height: 0.9; /* Tight leading for display fonts */
+  }
+
+
+  /* Uppercase utility (Teko shines in ALL CAPS) */
+  .teko-uppercase {
+    @apply uppercase tracking-wider;
+  }
   
 @layer components {
   .container {
