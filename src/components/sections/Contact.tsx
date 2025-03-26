@@ -248,26 +248,13 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Contact</h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <Phone className="h-5 w-5 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">General Inquiries</p>
-                    <p className="text-gray-600">+1 (800) ASETPRO</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <Phone className="h-5 w-5 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Technical Support</p>
-                    <p className="text-gray-600">+1 (888) 555-HELP</p>
-                  </div>
-                </li>
+                
                 <li className="flex items-start">
                   <Mail className="h-5 w-5 text-blue-600 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <p className="font-medium">Email Us</p>
                     <a href="mailto:contact@asetpro.com" className="text-blue-600 hover:underline">
-                      contact@asetpro.com
+                      hello@assetprotech.net
                     </a>
                   </div>
                 </li>
@@ -280,38 +267,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 </li>
               </ul>
             </div>
-            
-            {/* Office Locations */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Offices</h3>
-              <div className="space-y-6">
-                {locations.map((location, index) => (
-                  <div key={index} className={index > 0 ? "pt-6 border-t border-gray-200" : ""}>
-                    <h4 className="font-medium text-blue-600 mb-2">{location.city}</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="h-5 w-5 text-gray-500 mt-1 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{location.address}</span>
-                      </div>
-                      <div className="flex items-start">
-                        <Phone className="h-5 w-5 text-gray-500 mt-1 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{location.phone}</span>
-                      </div>
-                      <div className="flex items-start">
-                        <Mail className="h-5 w-5 text-gray-500 mt-1 mr-3 flex-shrink-0" />
-                        <a href={`mailto:${location.email}`} className="text-blue-600 hover:underline">
-                          {location.email}
-                        </a>
-                      </div>
-                      <div className="flex items-start">
-                        <Clock className="h-5 w-5 text-gray-500 mt-1 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{location.hours}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        
           </div>
         </div>
         
