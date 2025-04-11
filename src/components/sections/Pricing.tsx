@@ -154,7 +154,7 @@ const PricingSection = () => {
                 <p className="text-slate-300 mb-6 h-12">{tier.description}</p>
                 
                 <div className="flex items-baseline mb-8">
-                  <span className="text-4xl font-bold text-white">${tier.price[billingPeriod]}</span>
+                  <span className="text-4xl font-bold text-white">₦{tier.price[billingPeriod]}</span>
                   <span className="text-slate-300 ml-2">/month</span>
                   {billingPeriod === 'annually' && (
                     <span className="text-blue-200 text-sm ml-2">
