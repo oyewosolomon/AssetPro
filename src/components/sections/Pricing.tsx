@@ -38,7 +38,7 @@ const PricingSection = () => {
         "Mobile app access",
         "24/7 customer support"
       ],
-      asset_limit: "$100,000",
+      asset_limit: "₦100,000",
       highlight: false,
       cta: "Start Free Trial"
     },
@@ -58,7 +58,7 @@ const PricingSection = () => {
         "Customizable dashboards",
         "Priority support"
       ],
-      asset_limit: "$500,000",
+      asset_limit: "₦500,000",
       highlight: true,
       cta: "Get Started"
     },
@@ -79,7 +79,7 @@ const PricingSection = () => {
         "API access",
         "Custom tax strategies"
       ],
-      asset_limit: "$2,000,000",
+      asset_limit: "₦2,000,000",
       highlight: false,
       cta: "Contact Sales"
     }
